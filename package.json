@@ -1,0 +1,36 @@
+{
+  "name": "graphql-sqlserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "cross-env NODE_ENV=production && npm run clean && webpack -p ",
+    "start": "nodemon --exec babel-node index.js --offline",
+    "sequelize-skeleton": "sequelize-cli init:models &&  sequelize-cli init:config",
+    "init-db": "cd C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER16/MSSQL/Binn/ && echo 'DROP DATABASE IF EXISTS test; CREATE DATABASE test CHARACTER SET utf8 COLLATE utf8_general_ci' | ./mssql -u sa/java && cd -"
+  },
+  "keywords": [],
+  "author": "Mr Bhaskar Veligeti",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cross-env": "^5.2.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "express-session": "^1.16.2",
+    "graphql": "^14.5.5",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.19.2",
+    "rimraf": "^3.0.0",
+    "sequelize": "^5.18.4",
+    "sequelize-cli": "^5.5.1",
+    "tedious": "^6.4.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "development": {
+    "dialect": "mssql",
+    "username": "sa",
+    "password": "java",
+    "database": "test",
+    "host": "DWJHBDBA010",
+    "dialectOptions": {
+      "options": {
+        "instanceName": "MSSQLSERVER16",
+        "useUTC": false,
+        "dateFirst": 1
+      }
+    },
+    "define": {
+      "timestamps": false,
+      "freezeTableName": true
+    }
+  },
+  "test": {
+    "username": "sa",
+    "password": "java",
+    "database": "database_test",
+    "host": "DWJHBDBA010/MSSQLSERVER16",
+    "dialect": "mssql",
+    "operatorsAliases": "true"
+  },
+  "production": {
+    "username": "sa",
+    "password": "java",
+    "database": "database_production",
+    "host": "DWJHBDBA010/MSSQLSERVER16",
+    "dialect": "mssql",
+    "operatorsAliases": "false",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  }
+}
