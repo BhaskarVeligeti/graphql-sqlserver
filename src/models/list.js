@@ -13,11 +13,6 @@ export default (sequelize, DataTypes) => {
       {
         freezeTableName: true,
       }
-    );
-  
-    // Post.associate = (models) => {
-    //   Post.belongsTo(models.author);
-    // };
-  
+    );  
     return List;
   }
